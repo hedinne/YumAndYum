@@ -3,9 +3,6 @@
 .hero {
   .container;
 
-  display: flex;
-  align-items: center;
-
   height: 275rem;
 
   background-image: url('../images/hero-bg-2x.png');
@@ -14,13 +11,20 @@
   background-position: 70%;
 
   @media (min-width: @desktop) {
+    display: flex;
+    align-items: center;
+
     height: 400rem;
+
     background-position: right;
   }
 }
 
 .hero__container {
-  width: 274rem;
+  position: relative;
+  top: 65rem;
+
+  margin: 0 auto;
 
   h1 {
     margin-bottom: 10.5rem;
@@ -31,7 +35,15 @@
     display: none;
   }
 
+  button {
+    display: block;
+
+    margin: 0 auto;
+  }
+
   @media (min-width: @desktop) {
+    width: 274rem;
+
     p {
       display: block;
     }

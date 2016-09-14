@@ -3,8 +3,8 @@
 .cards {
   position: relative;
 
-  padding-top: 59rem;
-  padding-bottom: 54rem;
+  padding-top: 21rem;
+  padding-bottom: 30rem;
 
   &::before {
     content: '';
@@ -19,6 +19,11 @@
 
     background-color: #fafafa;
   }
+
+  @media (min-width: @desktop) {
+    padding-top: 59rem;
+    padding-bottom: 54rem;
+  }
 }
 
 .cards__container {
@@ -28,10 +33,14 @@
 }
 
 .cards__heading {
-  margin-bottom: 18rem;
+  margin-bottom: 10rem;
 
-  h4 {
-    margin-bottom: 2rem;
+  @media (min-width: @desktop) {
+    margin-bottom: 18rem;
+
+    h4 {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -43,30 +52,50 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  margin-bottom: 25rem;
+  margin-bottom: 15rem;
+
+  @media (min-width: @desktop) {
+    margin-bottom: 25rem;
+  }
 }
 
 .cards__item {
   width: 204.5rem;
 
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 
   box-shadow: 0 5rem 23rem 0rem rgba(0, 0, 0, 0.1);
+
+  @media (min-width: @desktop) {
+    margin-bottom: 15rem;
+  }
 }
 
 .cards__image {
-  margin-bottom: 11.5rem;
+  margin-bottom: 8rem;
+
+  width: 100%;
+
+  @media (min-width: @desktop) {
+    margin-bottom: 11.5rem;
+  }
 }
 
 .cards__date {
-  padding-left: 13rem;
+  padding-left: 9.5rem;
   margin-bottom: 2rem;
 
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
   color: #9b9b9b;
+
+  @media (min-width: @desktop) {
+    padding-left: 13rem;
+
+    font-size: 7rem;
+  }
 }
 
 .cards__wrapper {
@@ -74,17 +103,27 @@
   justify-content: space-between;
   align-items: baseline;
 
-  margin-bottom: 12.8rem;
+  margin-bottom: 8rem;
+
+  @media (min-width: @desktop) {
+    margin-bottom: 12.8rem;
+  }
 }
 
 .cards__title {
-  padding-left: 13rem;
+  padding-left: 9.5rem;
+
+  @media (min-width: @desktop) {
+    padding-left: 13rem;
+  }
 }
 
 .cards__link {
-  margin-right: 13rem;
+  .reset-anchor;
 
-  font-size: 8rem;
+  margin-right: 9.5rem;
+
+  font-size: 7rem;
   font-weight: normal;
   text-decoration: none;
   color: #e3cdb1;
@@ -94,6 +133,12 @@
   &:hover {
     color: darken( #e3cdb1, 20%);
   }
+
+  @media (min-width: @desktop) {
+    font-size: 8rem;
+
+    margin-right: 13rem;
+  }
 }
 
 .cards__button {
@@ -101,35 +146,37 @@
 
   margin: 0 auto;
 
-  &::before {
-    content: '';
+  @media (min-width: @desktop) {
+    &::before {
+      content: '';
 
-    display: block;
+      display: block;
 
-    position: absolute;
-    left: 78.5rem;
+      position: absolute;
+      left: 78.5rem;
 
-    margin-top: 5rem;
+      margin-top: 5rem;
 
-    height: 1rem;
-    width: 220rem;
+      height: 1rem;
+      width: 220rem;
 
-    background-color: #e7e7e7;
-  }
+      background-color: #e7e7e7;
+    }
 
-  &::after {
-    content: '';
+    &::after {
+      content: '';
 
-    display: block;
+      display: block;
 
-    position: absolute;
-    right: 78.5rem;
+      position: absolute;
+      right: 78.5rem;
 
-    margin-top: -4rem;
+      margin-top: -4rem;
 
-    height: 1rem;
-    width: 220rem;
+      height: 1rem;
+      width: 220rem;
 
-    background-color: #e7e7e7;
+      background-color: #e7e7e7;
+    }
   }
 }
