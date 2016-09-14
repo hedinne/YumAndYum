@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="./assets/css/index.css">
     <script>
-      function toggleMenu(e) {
+      const toggleMenu = (e) => {
         document.getElementById('nav').classList.toggle('nav--active');
       }
     </script>
@@ -14,7 +14,9 @@
   <body>
     <header class="header">
       <div class="nav__bar"><a href="./index.html" class="header__logoLink"><img src="./assets/images/logotype.svg" alt="Yum and Yum logo" class="header__logo"></a>
-        <div onClick="toggleMenu()" class="nav__hamburger"></div>
+        <div onClick="toggleMenu()" class="nav__hamburgerWrapper">
+          <div class="nav__hamburger"></div>
+        </div>
       </div>
       <nav id="nav" class="nav">
         <ul class="nav__list">

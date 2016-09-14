@@ -8,7 +8,7 @@ html
     link(rel="stylesheet", href="./assets/css/index.css")
     
     script.
-      function toggleMenu(e) {
+      const toggleMenu = (e) => {
         document.getElementById('nav').classList.toggle('nav--active');
       }
     title Verkefni 2
@@ -18,7 +18,8 @@ html
       .nav__bar
         a(href="./index.html").header__logoLink
           img(src="./assets/images/logotype.svg", alt="Yum and Yum logo").header__logo
-        div(onClick="toggleMenu()").nav__hamburger
+        div(onClick="toggleMenu()").nav__hamburgerWrapper
+          .nav__hamburger
       nav#nav.nav
         ul.nav__list
           li.nav__item.nav__item--hide
