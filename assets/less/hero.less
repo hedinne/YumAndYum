@@ -1,0 +1,39 @@
+@import './config.less';
+
+.hero {
+  .container;
+
+  display: flex;
+  align-items: center;
+
+  height: 275rem;
+
+  background-image: url('../images/hero-bg-2x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70%;
+
+  @media (min-width: @desktop) {
+    height: 400rem;
+    background-position: right;
+  }
+}
+
+.hero__container {
+  width: 274rem;
+
+  h1 {
+    margin-bottom: 10.5rem;
+  }
+
+  p {
+    margin-bottom: 15rem;
+    display: none;
+  }
+
+  @media (min-width: @desktop) {
+    p {
+      display: block;
+    }
+  }
+}

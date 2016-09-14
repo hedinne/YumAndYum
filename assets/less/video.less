@@ -1,0 +1,150 @@
+@import './config.less';
+
+.video {
+  //
+}
+
+.video__container {
+  .container;
+  padding-top: 70rem;
+}
+
+.video__heading {
+  margin-bottom: 18rem;
+}
+
+.video__list {
+  .reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 25rem;
+}
+
+.video__item {
+  width: 204.5rem;
+
+  margin-bottom: 15rem;
+
+  box-shadow: 0 5rem 23rem 0rem rgba(0, 0, 0, 0.1);
+
+}
+
+.video__imageWrapper{
+  position: relative;
+
+  height: 115rem;
+
+  margin-bottom: 11.5rem;
+
+  cursor: pointer;
+
+  &:before {
+    .fit;
+    content: '';
+    opacity: 0;
+
+    background-color: rgba(227, 205, 177, 0.7);
+
+    transition: opacity @hover-transition;
+  }
+
+  &:after {
+    .fit;
+
+    content: '';
+
+    opacity: 0;
+
+    background-image: url('../images/play-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: opacity @hover-transition;
+  }
+
+  &:hover {
+
+    &:after,
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.video__image {
+  height: 100%;
+  width: 100%;
+}
+
+.video__date {
+  padding-left: 13rem;
+  margin-bottom: 2rem;
+
+  font-size: 7rem;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: #9b9b9b;
+}
+
+.video__textWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 12.8rem;
+}
+
+.video__title {
+  padding-left: 13rem;
+}
+
+.video__link {
+  margin-right: 13rem;
+
+  font-size: 8rem;
+  font-weight: normal;
+  text-decoration: none;
+  color: #e3cdb1;
+}
+
+.video__button {
+  display: inherit;
+
+  margin: 0 auto 51.5rem;
+
+  &::before {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    left: 78.5rem;
+
+    margin-top: 5rem;
+
+    height: 1rem;
+    width: 220rem;
+
+    background-color: #e7e7e7;
+  }
+
+  &::after {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    right: 78.5rem;
+
+    margin-top: -4rem;
+
+    height: 1rem;
+    width: 220rem;
+
+    background-color: #e7e7e7;
+  }
+}

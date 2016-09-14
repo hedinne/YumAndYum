@@ -1,0 +1,192 @@
+@import './config.less';
+
+.header {
+
+  @media (min-width: @desktop) {
+    .container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+
+    height: 67.5rem;
+    width: 100%;
+
+    background-color: transparent;
+  }
+}
+
+.nav__bar {
+  .container;
+  .fit;
+
+  z-index: @z-navbar;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 30rem;
+
+  background-color: #fff;
+
+  box-shadow: 0 3rem 6rem 0 rgba(0, 0, 0, 0.05);
+
+  @media (min-width: @desktop) {
+    position: static;
+
+    padding: 0;
+
+    height: 100%;
+
+    background-color: transparent;
+
+    box-shadow: none;
+
+  }
+}
+
+.header__logoLink {
+  transition: transform @hover-transition;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.header__logo {
+  width: 40rem;
+
+  @media (min-width: @desktop) {
+    width: 66.5rem;
+  }
+}
+
+.nav__hamburger {
+  position: relative;
+
+  width: 8rem;
+  height: 1rem;
+
+  background-color: #000;
+
+  cursor: pointer;
+
+  &:before {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    top: -2.5rem;
+
+    width: 8rem;
+    height: 1rem;
+
+    background-color: #000;
+  }
+
+  &:after {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    top: 3rem;
+
+    width: 8rem;
+    height: 1rem;
+
+    background-color: #000;
+  }
+
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
+.nav {
+  .fit;
+
+  display: none;
+
+  z-index: @z-navlist;
+
+  background-color: #fafafa;
+
+  padding-top: 45rem;
+
+  @media (min-width: @desktop) {
+    display: block;
+    position: static;
+
+    padding-top: 0;
+
+    background-color: transparent;
+  }
+}
+
+.nav--active {
+  display: block;
+}
+
+.nav__list {
+  .reset-list;
+
+  @media (min-width: @desktop) {
+    display: flex;
+
+    margin: 0 -7.5rem;
+  }
+}
+
+
+.nav__item {
+  margin: 0 auto 11.5rem;
+
+  > a {
+    .reset-anchor;
+
+    display: block;
+
+    font-family: @font-family-heading;
+    font-size: 30rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+
+    color: #000;
+
+    transition: color @hover-transition;
+
+    &:hover {
+      color: lighten(#000, 20%);
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 7.5rem;
+
+    > a {
+
+      font-family: @font-family;
+      font-size: 10rem;
+      font-weight: 500;
+      color: #9b9b9b;
+
+
+      &:hover {
+        color: darken(#9b9b9b, 20%);
+      }
+    }
+  }
+}
+
+.nav__item--hide {
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}

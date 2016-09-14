@@ -1,0 +1,63 @@
+@import './config.less';
+
+.footer {
+  .container;
+
+  padding-top: 51rem;
+  padding-bottom: 51rem;
+
+  text-align: center;
+}
+
+.footer__text {
+  margin-bottom: 14.5rem;
+
+  font-size: 9rem;
+  font-weight: normal;
+  line-height: 0.94;
+  color: #000000;
+}
+
+.footer__icon {
+  display: inline-block;
+
+  margin: 0 5rem 8.5rem;
+
+  width: 20rem;
+  height: 20rem;
+
+  .logo__path {
+    fill: #d0d0d0;
+  }
+
+  .logo__circle {
+    stroke: #d0d0d0;
+    fill: none;
+  }
+
+
+  &:hover {
+    .logo__path {
+      fill: #e3cdb1;
+    }
+    .logo__circle {
+      stroke: #e3cdb1;
+      fill: none;
+    }
+  }
+}
+
+.footer__link {
+  .reset-anchor;
+
+  font-size: 7rem;
+  font-weight: 300;
+  letter-spacing: -0.1rem;
+  color: #d0d0d0;
+
+  transition: color @hover-transition;
+
+  &:hover {
+    color: darken(#d0d0d0, 20%);
+  }
+}

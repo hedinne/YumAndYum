@@ -1,0 +1,46 @@
+@import './config.less';
+
+.book {
+  position: relative;
+  height: 383rem;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    width: 810rem;
+    height: 335rem;
+
+    background-color: #f7f1eb;
+  }
+}
+
+.book__container {
+  .container;
+
+  position: absolute;
+
+  width: 100%;
+}
+
+.book__content {
+  margin-top: 118rem;
+
+  width: 274rem;
+
+  p {
+    margin-bottom: 15rem;
+  }
+}
+
+.book__image {
+  position: absolute;
+  right: 135rem;
+  top: 83rem;
+
+  width: 235rem;
+}
