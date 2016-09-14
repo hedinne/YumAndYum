@@ -1,6 +1,11 @@
 @import './config.less';
 
 .header {
+  position: fixed;
+
+  width: 100%;
+
+  z-index: @z-header;
 
   @media (min-width: @desktop) {
     .container;
@@ -118,6 +123,7 @@
 
 .nav {
   .fit;
+  position: fixed;
 
   display: none;
 
