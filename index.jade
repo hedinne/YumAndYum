@@ -8,17 +8,17 @@ html(lang="en")
     link(rel="stylesheet", href="./assets/css/index.css")
     
     script.
-      const toggleMenu = (e) => {
+      const toggleMenu = () => {
         document.getElementById('nav').classList.toggle('nav--active');
         document.getElementById('hamburger').classList.toggle('nav__hamburger--active');
       }
-    title Verkefni 2
+    title Yam&Yam
     
   body
     header.header
       .nav__bar
         a(href="./index.html").header__logoLink
-          img(src="./assets/images/logotype.svg", alt="Yum and Yum logo").header__logo
+          img(src="./assets/images/logotype.svg", alt="Yam and Yam logo").header__logo
         
         div(onClick="toggleMenu()", tabindex="0")#hamburger.nav__hamburger Drop Down Menu
 
@@ -50,38 +50,38 @@ html(lang="en")
           ul.cards__list
             li.cards__item
               img(src="./assets/images/image@3x.png" alt="Lax sushi rolls").cards__image
-              time(datetime="2016-08").cards__date August 2016
               .cards__wrapper
+                time(datetime="2016-08").cards__date August 2016
                 h3.cards__title Lax sushi rolls
                 a(href="").cards__link See
             li.cards__item
               img(src="./assets/images/image-card-2@3x.png", alt="Almonds cookies").cards__image
-              time(datetime="2016-08").cards__date August 2016
               .cards__wrapper
+                time(datetime="2016-08").cards__date August 2016
                 h3.cards__title Almonds cookies
                 a(href="").cards__link See
             li.cards__item
               img(src="./assets/images/image-card-3@3x.png", alt="Questches pie").cards__image
-              time(datetime="2016-08").cards__date August 2016
               .cards__wrapper
+                time(datetime="2016-08").cards__date August 2016
                 h3.cards__title Questches pie
                 a(href="").cards__link See
             li.cards__item
               img(src="./assets/images/image-card-4@3x.png", alt="Coffee cake").cards__image
-              time(datetime="2016-08").cards__date August 2016
               .cards__wrapper
+                time(datetime="2016-08").cards__date August 2016
                 h3.cards__title Coffee cake
                 a(href="").cards__link See
             li.cards__item
               img(src="./assets/images/image-card-5@3x.png", alt="Super duper pancakes").cards__image
-              time(datetime="2016-08").cards__date August 2016
               .cards__wrapper
+                time(datetime="2016-08").cards__date August 2016
                 h3.cards__title Super duper pancakes
                 a(href="").cards__link See
             li.cards__item
               img(src="./assets/images/image-card-6@3x.png", alt="Fancy baked vegetables").cards__image
-              time(datetime="2016-08").cards__date August 2016
               .cards__wrapper
+                time(datetime="2016-08").cards__date August 2016
                 h3.cards__title Fancy baked vegetables
                 a(href="").cards__link See
           
@@ -106,22 +106,22 @@ html(lang="en")
             li.video__item
               .video__imageWrapper
                 img(src="./assets/images/video2x.png" alt="Legumes printaniers").video__image
-              time(datetime="2016-08").video__date August 2016
-              .video__textWrapper
+              .video__text
+                time(datetime="2016-08").video__date August 2016
                 h3.video__title Legumes printaniers
                 a(href="").video__link See
             li.video__item
               .video__imageWrapper
                 img(src="./assets/images/image-video-2@3x.png" alt="Blossoming cookie").video__image
-              time(datetime="2016-08").video__date August 2016
-              .video__textWrapper
+              .video__text
+                time(datetime="2016-08").video__date August 2016
                 h3.video__title Blossoming cookie
                 a(href="").video__link See
             li.video__item
               .video__imageWrapper
                 img(src="./assets/images/image-video-3@3x.png" alt="Blueberry pie").video__image
-              time(datetime="2016-08").video__date August 2016
-              .video__textWrapper
+              .video__text
+                time(datetime="2016-08").video__date August 2016
                 h3.video__title Blueberry pie
                 a(href="").video__link See
           
@@ -140,30 +140,30 @@ html(lang="en")
       
     footer.footer
       p.footer__text Come and join us for more recipes
-      .footer__iconsWrapper
-        
-        a(href="", title="Facebook").footer__icon
-          .footer__hidden Youtube
-          svg(viewbox='0 0 42 42')
-            defs
-              mask(x='12.11', y='12.11', width='17.77', height='17.77', maskunits='userSpaceOnUse')
-                polygon(points='12.11 29.88 29.88 29.88 29.88 12.11 12.11 12.11 12.11 29.88')
-            circle.logo__circle(cx='21', cy='21', r='20')
-            path.logo__path(d='M28.9,12.11H13.09a1,1,0,0,0-1,1V28.9a1,1,0,0,0,1,1H21.6V23H19.29V20.32H21.6v-2a3.23,3.23,0,0,1,3.45-3.55,19,19,0,0,1,2.07.11v2.4H25.7c-1.11,0-1.33.53-1.33,1.31v1.71H27L26.68,23H24.37v6.88H28.9a1,1,0,0,0,1-1V13.09a1,1,0,0,0-1-1')
-        
-        a(href="", title="Twitter").footer__icon 
-          .footer__hidden Youtube
-          svg(viewbox='0 0 42 42')
-            circle.logo__circle(cx='21', cy='21', r='20')
-            path.logo__path(d='M31.08,16a2,2,0,0,1-1.79,0c.75-.45.79-.77,1.06-1.62a7.3,7.3,0,0,1-2.31.89,3.64,3.64,0,0,0-6.3,2.49,3.69,3.69,0,0,0,.09.83,10.34,10.34,0,0,1-7.51-3.81,3.65,3.65,0,0,0,1.13,4.87,3.63,3.63,0,0,1-1.65-.46s0,0,0,0a3.65,3.65,0,0,0,2.92,3.57,3.67,3.67,0,0,1-1.65.06,3.65,3.65,0,0,0,3.4,2.53,7.33,7.33,0,0,1-5.4,1.51,10.36,10.36,0,0,0,16-8.73c0-.16,0-.32,0-.47A7.78,7.78,0,0,0,31.08,16')
-        
-        a(href="", title="Youtube").footer__icon
-          .footer__hidden Youtube
-          svg(viewbox='0 0 42 42')
-            defs
-              mask(x='10.46', y='13.06', width='21.87', height='15.9', maskunits='userSpaceOnUse')
-                polygon(points='32.33 21 32.33 28.95 10.46 28.95 10.46 21 10.46 13.06 32.33 13.06 32.33 21')
-            circle.logo__circle(cx='21', cy='21', r='20')
-            path.logo__path(d='M19.6,23V17.78l4.86,2.62Zm10.68-6.13A4.11,4.11,0,0,0,29.56,15a2.53,2.53,0,0,0-1.8-.79c-2.52-.19-6.3-.19-6.3-.19h0s-3.78,0-6.3.19a2.53,2.53,0,0,0-1.8.79,4.11,4.11,0,0,0-.72,1.85,29.08,29.08,0,0,0-.18,3V21.3a29.08,29.08,0,0,0,.18,3,4.11,4.11,0,0,0,.72,1.85,3,3,0,0,0,2,.8c1.44.14,6.12.19,6.12.19s3.78,0,6.3-.19a2.53,2.53,0,0,0,1.8-.79,4.11,4.11,0,0,0,.72-1.85,29.12,29.12,0,0,0,.18-3V19.89a29.12,29.12,0,0,0-.18-3Z')
+      ul.footer__list  
+        li.footer__item
+          a(href="", title="Facebook").footer__icon
+            .footer__hidden Youtube
+            svg(viewbox='0 0 42 42')
+              defs
+                mask(x='12.11', y='12.11', width='17.77', height='17.77', maskunits='userSpaceOnUse')
+                  polygon(points='12.11 29.88 29.88 29.88 29.88 12.11 12.11 12.11 12.11 29.88')
+              circle.logo__circle(cx='21', cy='21', r='20')
+              path.logo__path(d='M28.9,12.11H13.09a1,1,0,0,0-1,1V28.9a1,1,0,0,0,1,1H21.6V23H19.29V20.32H21.6v-2a3.23,3.23,0,0,1,3.45-3.55,19,19,0,0,1,2.07.11v2.4H25.7c-1.11,0-1.33.53-1.33,1.31v1.71H27L26.68,23H24.37v6.88H28.9a1,1,0,0,0,1-1V13.09a1,1,0,0,0-1-1')
+        li.footer__item  
+          a(href="", title="Twitter").footer__icon 
+            .footer__hidden Youtube
+            svg(viewbox='0 0 42 42')
+              circle.logo__circle(cx='21', cy='21', r='20')
+              path.logo__path(d='M31.08,16a2,2,0,0,1-1.79,0c.75-.45.79-.77,1.06-1.62a7.3,7.3,0,0,1-2.31.89,3.64,3.64,0,0,0-6.3,2.49,3.69,3.69,0,0,0,.09.83,10.34,10.34,0,0,1-7.51-3.81,3.65,3.65,0,0,0,1.13,4.87,3.63,3.63,0,0,1-1.65-.46s0,0,0,0a3.65,3.65,0,0,0,2.92,3.57,3.67,3.67,0,0,1-1.65.06,3.65,3.65,0,0,0,3.4,2.53,7.33,7.33,0,0,1-5.4,1.51,10.36,10.36,0,0,0,16-8.73c0-.16,0-.32,0-.47A7.78,7.78,0,0,0,31.08,16')
+        li.footer__item
+          a(href="", title="Youtube").footer__icon
+            .footer__hidden Youtube
+            svg(viewbox='0 0 42 42')
+              defs
+                mask(x='10.46', y='13.06', width='21.87', height='15.9', maskunits='userSpaceOnUse')
+                  polygon(points='32.33 21 32.33 28.95 10.46 28.95 10.46 21 10.46 13.06 32.33 13.06 32.33 21')
+              circle.logo__circle(cx='21', cy='21', r='20')
+              path.logo__path(d='M19.6,23V17.78l4.86,2.62Zm10.68-6.13A4.11,4.11,0,0,0,29.56,15a2.53,2.53,0,0,0-1.8-.79c-2.52-.19-6.3-.19-6.3-.19h0s-3.78,0-6.3.19a2.53,2.53,0,0,0-1.8.79,4.11,4.11,0,0,0-.72,1.85,29.08,29.08,0,0,0-.18,3V21.3a29.08,29.08,0,0,0,.18,3,4.11,4.11,0,0,0,.72,1.85,3,3,0,0,0,2,.8c1.44.14,6.12.19,6.12.19s3.78,0,6.3-.19a2.53,2.53,0,0,0,1.8-.79,4.11,4.11,0,0,0,.72-1.85,29.12,29.12,0,0,0,.18-3V19.89a29.12,29.12,0,0,0-.18-3Z')
       
       a(href="").footer__link yamyam.com

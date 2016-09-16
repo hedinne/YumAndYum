@@ -39,9 +39,8 @@
 }
 
 .book__content {
-  margin-top: 32rem;
-
-  margin-bottom: 27rem;
+  margin: 32rem 0 27rem;
+  padding: 0 9.5rem;
 
   width: 100%;
 
@@ -49,11 +48,23 @@
     margin-bottom: 15rem;
   }
 
+  h4 {
+    display: none;
+  }
+
   @media (min-width: @tablet) {
-    margin-top: 118rem;
+    margin-top: 100rem;
     margin-bottom: 0;
 
     width: 274rem;
+
+    h4 {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 118rem;
   }
 }
 
@@ -80,5 +91,9 @@
 
   @media (min-width: @tablet) {
     margin: 0;
+  }
+
+  &:hover {
+    color: #f7f1eb;
   }
 }
