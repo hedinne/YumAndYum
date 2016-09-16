@@ -3,19 +3,33 @@
 .footer {
   .container;
 
-  padding-top: 51rem;
-  padding-bottom: 51rem;
+  padding-top: 21.8rem;
+  padding-bottom: 21.5rem;
 
   text-align: center;
+
+  @media (min-width: @tablet) {
+    padding-top: 51rem;
+    padding-bottom: 51rem;
+  }
 }
 
 .footer__text {
   margin-bottom: 14.5rem;
 
-  font-size: 9rem;
+  font-size: 7rem;
   font-weight: normal;
+  text-align: center;
   line-height: 0.94;
+  letter-spacing: -0.1rem;
   color: #000000;
+
+  @media (min-width: @tablet) {
+    font-size: 11rem;
+  }
+  @media (min-width: @desktop) {
+    font-size: 9rem;
+  }
 }
 
 .footer__icon {
@@ -60,4 +74,17 @@
   &:hover {
     color: darken(#d0d0d0, 20%);
   }
+
+  @media (min-width: @tablet) {
+    font-size: 10rem;
+  }
+  @media (min-width: @desktop) {
+    font-size: 7rem;
+  }
+}
+
+.footer__hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }

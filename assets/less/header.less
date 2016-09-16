@@ -7,7 +7,7 @@
 
   z-index: @z-header;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     .container;
 
     display: flex;
@@ -39,7 +39,7 @@
 
   box-shadow: 0 3rem 6rem 0 rgba(0, 0, 0, 0.05);
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     position: static;
 
     padding: 0;
@@ -64,61 +64,37 @@
 .header__logo {
   width: 40rem;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     width: 66.5rem;
   }
 }
 
-.nav__hamburgerWrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.nav__hamburger {
+  width: 8rem;
+  height: 8rem;
 
-  width: 12rem;
-  height: 12rem;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  background-image: url('../images/burger.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 
   cursor: pointer;
 
-  @media (min-width: @desktop) {
+  transition: transform 700ms ease-in-out, background-image 700ms cubic-bezier(1, 0, 0, 1);
+
+  transform: rotateY(0);
+  @media (min-width: @tablet) {
     display: none;
   }
 }
 
-.nav__hamburger {
-  position: relative;
-
-  width: 8rem;
-  height: 1rem;
-
-  background-color: #000;
-
-  &:before {
-    content: '';
-
-    display: block;
-
-    position: absolute;
-    top: -2.5rem;
-
-    width: 8rem;
-    height: 1rem;
-
-    background-color: #000;
-  }
-
-  &:after {
-    content: '';
-
-    display: block;
-
-    position: absolute;
-    top: 3rem;
-
-    width: 8rem;
-    height: 1rem;
-
-    background-color: #000;
-  }
+.nav__hamburger--active {
+  background-image: url('../images/x.svg');
+  transform: rotateY(180deg);
 }
 
 .nav {
@@ -133,7 +109,11 @@
 
   padding-top: 45rem;
 
-  @media (min-width: @desktop) {
+  bottom: 100%;
+
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
     display: block;
     position: static;
 
@@ -145,12 +125,17 @@
 
 .nav--active {
   display: block;
+
+  animation: slidedown 200ms linear;
+  animation-fill-mode: forwards;
+  padding-top: 45rem;
+
 }
 
 .nav__list {
   .reset-list;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     display: flex;
 
     margin: 0 -7.5rem;
@@ -181,13 +166,13 @@
     }
   }
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     margin: 0 7.5rem;
 
     > a {
 
       font-family: @font-family;
-      font-size: 10rem;
+      font-size: 12rem;
       font-weight: 500;
       color: #9b9b9b;
 
@@ -197,10 +182,16 @@
       }
     }
   }
+
+  @media (min-width: @desktop) {
+    > a {
+      font-size: 10rem;
+    }
+  }
 }
 
 .nav__item--hide {
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     display: none;
   }
 }

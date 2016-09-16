@@ -22,13 +22,14 @@ html, body { // stylelint-disable-line
   background: #fff;
   font-size: 0.625vw;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     font-size: 0.125vw;
   }
 }
 
 html { // stylelint-disable-line
   -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
 
   overflow-x: hidden;
   overflow-y: auto;
@@ -63,7 +64,7 @@ h1 { // Main Heading
   font-weight: bold;
   text-align: center;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     font-size: 30rem;
     text-align: left;
   }
@@ -81,9 +82,13 @@ h2 { // Segment heading
     color: #000;
   }
 
+  @media (min-width: @tablet) {
+    font-size: 22rem;
+    text-align: left;
+  }
+
   @media (min-width: @desktop) {
     font-size: 20rem;
-    text-align: left;
   }
 }
 
@@ -92,6 +97,9 @@ h3 { // Card heading
   font-size: 9rem;
   font-weight: bold;
 
+  @media (min-width: @tablet) {
+    font-size: 13rem;
+  }
   @media (min-width: @desktop) {
     font-size: 11rem;
   }
@@ -105,9 +113,12 @@ h4 { // Segment sub-heading
 
   color: #e3cdb1;
 
+  @media (min-width: @tablet) {
+    font-size: 11rem;
+    text-align: left;
+  }
   @media (min-width: @desktop) {
     font-size: 8rem;
-    text-align: left;
   }
 }
 
@@ -115,11 +126,18 @@ p {
   font-size: 7.5rem;
   font-weight: 300;
   line-height: 1.78;
+  text-align: center;
   color: #5e5b69;
 
+  @media (min-width: @tablet) {
+    font-size: 11rem;
+
+    text-align: left;
+  }
   @media (min-width: @desktop) {
     font-size: 9rem;
 
+    text-align: left;
   }
 }
 
@@ -147,10 +165,13 @@ button {
     color: #fff;
   }
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     width: 125rem;
     height: 26rem;
 
+    font-size: 11rem;
+  }
+  @media (min-width: @desktop) {
     font-size: 8rem;
   }
 }

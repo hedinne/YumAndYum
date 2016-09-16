@@ -1,6 +1,6 @@
 @import './mixins.less';
+@import './keyframes.less';
 @import 'https://fonts.googleapis.com/css?family=Playfair+Display:700|Poppins:300,400,500';
-
 
 // Fonts
 @font-family: 'Poppins', sans-serif;
@@ -9,7 +9,8 @@
 @font-color: #000;
 
 // Breakpoints
-@desktop: 1080px;
+@tablet: 768px;
+@desktop: (@tablet / 0.711111111111);
 
 // Z indexs
 @z-navbar: 5;

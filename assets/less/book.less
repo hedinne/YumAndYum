@@ -2,7 +2,7 @@
 
 .book {
   position: relative;
-  height: 383rem;
+  height: 315rem;
 
   &::before {
     content: '';
@@ -12,15 +12,26 @@
 
     display: block;
 
-    width: 810rem;
-    height: 335rem;
+    width: 100%;
+    height: 265rem;
 
     background-color: #f7f1eb;
+  }
+
+  @media (min-width: @tablet) {
+    height: 383rem;
+
+    &::before {
+      height: 335rem;
+    }
   }
 }
 
 .book__container {
   .container;
+
+  display: flex;
+  flex-direction: column-reverse;
 
   position: absolute;
 
@@ -28,19 +39,46 @@
 }
 
 .book__content {
-  margin-top: 118rem;
+  margin-top: 32rem;
 
-  width: 274rem;
+  margin-bottom: 27rem;
+
+  width: 100%;
 
   p {
     margin-bottom: 15rem;
   }
+
+  @media (min-width: @tablet) {
+    margin-top: 118rem;
+    margin-bottom: 0;
+
+    width: 274rem;
+  }
 }
 
 .book__image {
-  position: absolute;
-  right: 135rem;
-  top: 83rem;
+  margin: 0 20rem;
 
-  width: 235rem;
+  width: 96rem;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    right: 135rem;
+    top: 83rem;
+
+    margin: 0;
+
+    width: 235rem;
+  }
+}
+
+.book__button {
+  display: block;
+
+  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+  }
 }
