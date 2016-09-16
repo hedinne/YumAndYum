@@ -3,9 +3,9 @@
 .header {
   position: fixed;
 
-  width: 100%;
-
   z-index: @z-header;
+
+  width: 100%;
 
   @media (min-width: @tablet) {
     .container;
@@ -27,11 +27,11 @@
   .container;
   .fit;
 
-  z-index: @z-navbar;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  z-index: @z-navbar;
 
   height: 30rem;
 
@@ -75,18 +75,20 @@
 
   text-indent: 100%;
   white-space: nowrap;
-  overflow: hidden;
+
+  cursor: pointer;
 
   background-image: url('../images/burger.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 
-  cursor: pointer;
+  overflow: hidden;
 
   transition: transform 700ms ease-in-out, background-image 700ms cubic-bezier(1, 0, 0, 1);
 
   transform: rotateY(0);
+
   @media (min-width: @tablet) {
     display: none;
   }
@@ -99,17 +101,16 @@
 
 .nav {
   .fit;
-  position: fixed;
-
   display: none;
+
+  position: fixed;
+  bottom: 100%;
 
   z-index: @z-navlist;
 
-  background-color: #fafafa;
-
   padding-top: 45rem;
 
-  bottom: 100%;
+  background-color: #fafafa;
 
   overflow: hidden;
 
@@ -126,10 +127,10 @@
 .nav--active {
   display: block;
 
-  animation: slidedown 200ms linear;
-  animation-fill-mode: forwards;
   padding-top: 45rem;
 
+  animation: slidedown 200ms linear;
+  animation-fill-mode: forwards;
 }
 
 .nav__list {
@@ -184,6 +185,7 @@
   }
 
   @media (min-width: @desktop) {
+
     > a {
       font-size: 10rem;
     }

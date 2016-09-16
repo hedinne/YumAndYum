@@ -1,3 +1,5 @@
+// stylelint-disable selector-no-type
+
 @import './config.less';
 
 @-ms-viewport { // stylelint-disable-line
@@ -16,11 +18,13 @@
   box-sizing: border-box;
 }
 
-html, body { // stylelint-disable-line
+html,
+body {
   min-height: 100vh;
 
-  background: #fff;
   font-size: 0.625vw;
+
+  background: #fff;
 
   @media (min-width: @tablet) {
     font-size: 0.125vw;
@@ -28,8 +32,8 @@ html, body { // stylelint-disable-line
 }
 
 html { // stylelint-disable-line
-  -webkit-overflow-scrolling: touch;
   text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
 
   overflow-x: hidden;
   overflow-y: auto;
@@ -52,8 +56,12 @@ img { // stylelint-disable-line
   max-width: 100%;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -100,6 +108,7 @@ h3 { // Card heading
   @media (min-width: @tablet) {
     font-size: 13rem;
   }
+
   @media (min-width: @desktop) {
     font-size: 11rem;
   }
@@ -117,6 +126,7 @@ h4 { // Segment sub-heading
     font-size: 11rem;
     text-align: left;
   }
+
   @media (min-width: @desktop) {
     font-size: 8rem;
   }
@@ -134,6 +144,7 @@ p {
 
     text-align: left;
   }
+
   @media (min-width: @desktop) {
     font-size: 9rem;
 
@@ -151,18 +162,20 @@ button {
   font-stretch: normal;
   color: #e3cdb1;
 
+  cursor: pointer;
+
   background-color: transparent;
 
   border: solid 0.5rem #e3cdb1;
 
-  cursor: pointer;
-
-  transition: background-color 300ms ease-in-out,
+  transition: background
+    -color 300ms ease-in-out,
     color 300ms ease-in-out;
 
   &:hover {
-    background-color: #e3cdb1;
     color: #fff;
+
+    background-color: #e3cdb1;
   }
 
   @media (min-width: @tablet) {
@@ -171,6 +184,7 @@ button {
 
     font-size: 11rem;
   }
+
   @media (min-width: @desktop) {
     font-size: 8rem;
   }
