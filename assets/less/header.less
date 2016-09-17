@@ -49,7 +49,6 @@
     background-color: transparent;
 
     box-shadow: none;
-
   }
 }
 
@@ -88,6 +87,10 @@
   transition: transform 700ms ease-in-out, background-image 700ms cubic-bezier(1, 0, 0, 1);
 
   transform: rotateY(0);
+
+  &:hover {
+    transform: scale(1.15);
+  }
 
   @media (min-width: @tablet) {
     display: none;
@@ -163,7 +166,7 @@
     transition: color @hover-transition;
 
     &:hover {
-      color: lighten(#000, 20%);
+      color: lighten(#000, 30%);
     }
   }
 
